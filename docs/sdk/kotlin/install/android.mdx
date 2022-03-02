@@ -19,6 +19,9 @@ To add local-only Realm Database to your application, make the following changes
 
 - Add `io.realm.kotlin:library-base` to the list of dependencies.
 - Add `io.realm.kotlin` to the list of plugins.
+- To use coroutines with the SDK, add
+  `org.jetbrains.kotlinx:kotlinx-coroutines-core`
+  to the list of dependencies.
 
 ```kotlin
 plugins {
@@ -53,7 +56,9 @@ android {
 }
 dependencies {
     // highlight-next-line
-    compileOnly 'io.realm.kotlin:library-base:{version}'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:{kotlinx-coroutines-version}'
+    // highlight-next-line
+    implementation 'io.realm.kotlin:library-base:{version}'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
@@ -71,6 +76,9 @@ To add Realm Database and Sync to your application, make the following changes t
 
 - Add `io.realm.kotlin:library-sync` to the list of dependencies.
 - Add `io.realm.kotlin` to the list of plugins.
+- To use coroutines with the SDK, add
+  `org.jetbrains.kotlinx:kotlinx-coroutines-core`
+  to the list of dependencies.
 
 ```kotlin
 plugins {
@@ -105,7 +113,9 @@ android {
 }
 dependencies {
     // highlight-next-line
-    compileOnly 'io.realm.kotlin:library-sync:{version}'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:{kotlinx-coroutines-version}'
+    // highlight-next-line
+    implementation 'io.realm.kotlin:library-sync:{version}'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
