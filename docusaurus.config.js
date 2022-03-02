@@ -10,7 +10,7 @@ const config = {
   tagline:
     "MongoDB Realm is a development platform designed for modern, data-driven applications. You can use Realm to build mobile, web, desktop, and IoT.",
   url: "https://www.realm.io",
-  baseUrl: "/docs/",
+  baseUrl: "/docusaurus-realm/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false, // Required to make site not give warning about broken links. unsure why - ben
