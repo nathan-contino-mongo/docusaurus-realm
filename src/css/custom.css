@@ -37,5 +37,5 @@ html[data-theme='dark'] {
 /* If you have a different syntax highlighting theme for dark mode. */
 [data-theme='dark'] .docusaurus-highlight-code-line {
   /* Color which works with dark mode syntax highlighting theme */
-  background-color: rgb(50, 100, 100);
+  background-color: rgb(100, 100, 20);
 }
