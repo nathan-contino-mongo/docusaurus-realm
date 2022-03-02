@@ -17,12 +17,15 @@ import PrerequisitesKotlin from './_markdown-prerequisites-kotlin.mdx';
 
 To add local-only Realm Database to your application, make the following changes to your app-level Gradle build file, typically found at `<project>/app/build.gradle`:
 
-Add `io.realm.kotlin:library-base` to the list of dependencies.
+- Add `io.realm.kotlin:library-base` to the list of dependencies.
+- Add `io.realm.kotlin` to the list of plugins.
 
 ```kotlin
 plugins {
     id 'com.android.application'
+    // highlight-next-line
     id 'org.jetbrains.kotlin.android'
+    id 'io.realm.kotlin' version "0.9.0"
 }
 android {
     compileSdk 31
@@ -66,12 +69,15 @@ dependencies {
 
 To add Realm Database and Sync to your application, make the following changes to your app-level Gradle build file, typically found at `<project>/app/build.gradle`:
 
-Add `io.realm.kotlin:library-sync` to the list of dependencies.
+- Add `io.realm.kotlin:library-sync` to the list of dependencies.
+- Add `io.realm.kotlin` to the list of plugins.
 
 ```kotlin
 plugins {
     id 'com.android.application'
+    // highlight-next-line
     id 'org.jetbrains.kotlin.android'
+    id 'io.realm.kotlin' version "0.9.0"
 }
 android {
     compileSdk 31
