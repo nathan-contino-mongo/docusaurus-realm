@@ -15,7 +15,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false, // Required to make site not give warning about broken links. unsure why - ben
   favicon: "img/realm-logo.png",
-  organizationName: "mongodb", // Usually your GitHub org/user name.
+  organizationName: "nathan-contino-mongo", // Usually your GitHub org/user name.
   projectName: "docusaurus-realm", // Usually your repo name.
   plugins: [
     [
