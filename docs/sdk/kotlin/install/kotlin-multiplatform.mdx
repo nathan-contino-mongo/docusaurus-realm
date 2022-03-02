@@ -1,10 +1,10 @@
 ---
 title: Install (Kotlin Multiplatform)
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import PrerequisitesKotlin from './_markdown-prerequisites-kotlin.mdx';
+import {variables} from './../../../../variables';
 
 ## Prerequisites
 
@@ -26,7 +26,10 @@ file, typically found at `<project>/shared/build.gradle.kts`:
   `org.jetbrains.kotlinx:kotlinx-coroutines-core`
   to the dependencies block of your common module.
 
-```kotlin
+<pre><code parentName="pre" {...{
+            "className": "language-kotlin"
+          }}>
+{`
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
@@ -56,9 +59,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // highlight-next-line
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${variables.kotlinx_coroutines_version}")
                 // highlight-next-line
-                implementation("io.realm.kotlin:library-base:{version}")
+                implementation("io.realm.kotlin:library-base:${variables.kotlin_sdk_version}")
             }
         }
         val commonTest by getting {
@@ -100,13 +103,17 @@ android {
         targetSdk = 30
     }
 }
-```
+`}
+</code></pre>
 
-Then, add `classpath("io.realm.kotlin:gradle-plugin:{version}")`
+Then, add `classpath("io.realm.kotlin:gradle-plugin:${variables.kotlin_sdk_version}")`
 to the `buildscript.dependencies` block of your project-level
 Gradle build file, typically found at `<project>/build.gradle.kts`:
 
-```kotlin
+<pre><code parentName="pre" {...{
+            "className": "language-kotlin"
+          }}>
+{`
 buildscript {
     repositories {
         gradlePluginPortal()
@@ -117,7 +124,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
         classpath("com.android.tools.build:gradle:7.1.1")
         // highlight-next-line
-        classpath("io.realm.kotlin:gradle-plugin:{version}")
+        classpath("io.realm.kotlin:gradle-plugin:${variables.kotlin_sdk_version}")
     }
 }
 
@@ -131,7 +138,8 @@ allprojects {
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }
-```
+`}
+</code></pre>
 
 </TabItem>
   <TabItem value="sync" label="Sync">
@@ -147,7 +155,10 @@ file, typically found at `shared/build.gradle.kts`:
   `org.jetbrains.kotlinx:kotlinx-coroutines-core`
   to the dependencies block of your common module.
 
-```kotlin
+<pre><code parentName="pre" {...{
+            "className": "language-kotlin"
+          }}>
+{`
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
@@ -177,9 +188,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // highlight-next-line
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${variables.kotlinx_coroutines_version}")
                 // highlight-next-line
-                implementation("io.realm.kotlin:library-sync:{version}")
+                implementation("io.realm.kotlin:library-sync:${variables.kotlin_sdk_version}")
             }
         }
         val commonTest by getting {
@@ -221,13 +232,18 @@ android {
         targetSdk = 30
     }
 }
-```
+`}
+</code></pre>
+
 
 Then, add `io.realm.kotlin:gradle-plugin`
 to the `buildscript.dependencies` block of your project-level
 Gradle build file, typically found at `<project>/build.gradle.kts`:
 
-```kotlin
+<pre><code parentName="pre" {...{
+            "className": "language-kotlin"
+          }}>
+{`
 buildscript {
     repositories {
         gradlePluginPortal()
@@ -238,7 +254,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
         classpath("com.android.tools.build:gradle:7.1.1")
         // highlight-next-line
-        classpath("io.realm.kotlin:gradle-plugin:{version}")
+        classpath("io.realm.kotlin:gradle-plugin:${variables.kotlin_sdk_version}")
     }
 }
 
@@ -252,7 +268,8 @@ allprojects {
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }
-```
+`}
+</code></pre>
 
   </TabItem>
 </Tabs>
@@ -264,7 +281,7 @@ SDK's compile-time dependency to your Android module `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    compileOnly("io.realm.kotlin:library:{version}")
+    compileOnly("io.realm.kotlin:library:${variables.kotlin_sdk_version}")
 }
 ```
 :::

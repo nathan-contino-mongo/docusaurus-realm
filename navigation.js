@@ -15,12 +15,12 @@ const navBar = {
       position: "left",
       items: [
         {
-          href: "/sdk/flutter/intro",
-          label: "Flutter SDK",
-        },
-        {
           href: "/sdk/kotlin/intro",
           label: "Kotlin SDK",
+        },
+        {
+          href: "/sdk/flutter/intro",
+          label: "Flutter SDK",
         },
       ],
     },
