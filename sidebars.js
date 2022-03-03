@@ -30,7 +30,7 @@ const sidebars = {
       type: 'category',
       label: 'Realm Database',
       collapsible: true,
-      collapsed: true,
+      collapsed: false,
       items: [
         "sdk/kotlin/realm-database/overview",
         {
