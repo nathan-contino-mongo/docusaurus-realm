@@ -29,7 +29,7 @@ classes in your application code with
 To define your application's data model, add the following class
 definition to your application code:
 
-<CodeBlock className="language-kotlin">{Model}</CodeBlock>
+<CodeBlock language="kotlin">{Model}</CodeBlock>
 
 ## Open a Realm
 
@@ -39,7 +39,7 @@ would like to open, including the name, location, and schema.
 Pass your configuration to the [Realm constructor](https://docs.mongodb.com/realm-sdks/kotlin/latest/library-base/-realm%20-kotlin%20-multiplatform%20-s-d-k/io.realm/-realm/index.html)
 to generate an instance of that realm:
 
-<CodeBlock className="language-kotlin">{OpenARealm}</CodeBlock>
+<CodeBlock language="kotlin">{OpenARealm}</CodeBlock>
 
 ## Create, Read, Update, and Delete Objects
 
@@ -49,19 +49,19 @@ Once opened, you can create objects within a realm in a
 To create a new `Task`, instantiate an instance of the
 `Task` class and add it to the realm in a write transaction block:
 
-<CodeBlock className="language-kotlin">{Create}</CodeBlock>
+<CodeBlock language="kotlin">{Create}</CodeBlock>
 
 You can retrieve a collection of all tasks in the realm with the
 [io.realm.objects()](https://docs.mongodb.com/realm-sdks/kotlin/latest/-realm%20-kotlin%20-multiplatform%20-s-d-k/io.realm/objects.html)
 convenience wrapper:
 
-<CodeBlock className="language-kotlin">{Read}</CodeBlock>
+<CodeBlock language="kotlin">{Read}</CodeBlock>
 
 You can also filter a collection to retrieve a more specific collection
 of objects:
 
 
-<CodeBlock className="language-kotlin">{ReadFiltered}</CodeBlock>
+<CodeBlock language="kotlin">{ReadFiltered}</CodeBlock>
 
 :::note Realm Query Language
 
@@ -72,12 +72,12 @@ the [Realm Query Language Reference](sdk/kotlin/realm-database/query-language).
 To modify a task, update its properties in a write transaction block:
 
 
-<CodeBlock className="language-kotlin">{Update}</CodeBlock>
+<CodeBlock language="kotlin">{Update}</CodeBlock>
 
 Finally, you can delete a task by calling the [object.delete()](https://docs.mongodb.com/realm-sdks/kotlin/latest/library-base/-realm%20-kotlin%20-multiplatform%20-s-d-k/io.realm/-realm-object/index.html#2054000914%2FExtensions%2F1327329691)
 method in a write transaction block:
 
-<CodeBlock className="language-kotlin">{Delete}</CodeBlock>
+<CodeBlock language="kotlin">{Delete}</CodeBlock>
 
 ## Complete Example
 
@@ -86,4 +86,4 @@ copy and paste into the `Greeting.greeting()` method in the
 `commonMain` module.
 
 
-<CodeBlock className="language-kotlin">{QuickStart}</CodeBlock>
+<CodeBlock language="kotlin">{QuickStart}</CodeBlock>
