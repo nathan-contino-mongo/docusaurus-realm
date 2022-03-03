@@ -24,18 +24,28 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+### Deployment to Github Pages
 
-Using SSH:
+Prerequisites:
 
-```
-$ USE_SSH=true yarn deploy
-```
+1. Set up your site to use GitHub pages:
 
-Not using SSH:
+   1. In your repo, go to "Settings" (tab bar) > "Pages" (sidebar)
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+   1. Activate GitHub Pages, with "gh-pages" as the source branch and "/" as the source directory.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+   1. After you push your site, you should be able to view it (after 30 seconds to a minute of backend magic) at the link on the GitHub Pages configuration page.
+
+1. Use the following command to build your site and push it to the gh-pages branch (this will create the branch if it doesn't exist already)
+
+   Using SSH for github auth:
+
+   ```
+   $ USE_SSH=true yarn deploy
+   ```
+
+   Not using SSH for github auth:
+
+   ```
+   $ GIT_USER=<Your GitHub username> yarn deploy
+   ```

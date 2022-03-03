@@ -7,7 +7,7 @@ const navBar = {
   items: [
     {
       label: "Get Started",
-      href: "/get-started/introduction-mobile",
+      href: "/get-started",
     },
     {
       type: "dropdown",

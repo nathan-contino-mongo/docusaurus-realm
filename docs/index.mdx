@@ -1,6 +1,10 @@
 ---
 title: Realm SDK Documentation
+pagination_next: get-started
 ---
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
 MongoDB Realm has open-source SDKs available for most popular languages, frameworks, and platforms. Each SDK is language-idiomatic and includes:
 
 - The core database APIs for creating and working with on-device databases.
@@ -11,6 +15,4 @@ MongoDB Realm has open-source SDKs available for most popular languages, framewo
   [Triggers](https://docs.mongodb.com/realm/triggers/overview/#std-label-trigger-types),
   and [more](https://docs.mongodb.com/realm/cloud/).
 
-Get Started:
-
-- [Flutter Alpha](./flutter/intro)
+<DocCardList items={useCurrentSidebarCategory().items}/>
