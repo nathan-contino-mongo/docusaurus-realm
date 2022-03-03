@@ -33,6 +33,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "sdk/kotlin/realm-database/overview",
+        "sdk/kotlin/realm-database/open-and-close-a-realm",
         {
           type: 'category',
           label: 'Create',
@@ -78,7 +79,6 @@ const sidebars = {
         "sdk/kotlin/realm-database/query-language",
         "sdk/kotlin/realm-database/write-transactions",
         "sdk/kotlin/realm-database/frozen-architecture",
-        "sdk/kotlin/realm-database/open-and-close-a-realm",
         {
           type: 'category',
           label: 'Schemas',
