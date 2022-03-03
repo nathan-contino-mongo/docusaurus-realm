@@ -131,15 +131,7 @@ const sidebars = {
       label: "Get Started",
       id: "studio/index",
     },
-    { type: "doc", id: "release-notes/index" },
-  ],
-  releaseNotes: [
-    {
-      type: "doc",
-      label: "Release Notes",
-      id: "release-notes/index",
-    },
-  ],
+  ]
 };
 
 module.exports = sidebars;

@@ -42,10 +42,6 @@ const navBar = {
           label: "MongoDB Stitch (Legacy)",
         },
         {
-          href: "/release-notes",
-          label: "Release Notes",
-        },
-        {
           href: "https://docs.mongodb.com/realm/cloud/",
           label: "App Services"
         }
