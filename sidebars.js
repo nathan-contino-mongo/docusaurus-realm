@@ -27,16 +27,6 @@ const sidebars = {
     },
     "sdk/kotlin/quick-start",
     {
-      type: 'link',
-      label: 'Release Notes',
-      href: 'https://github.com/realm/realm-kotlin/blob/releases/CHANGELOG.md',
-    },
-    {
-      type: 'link',
-      label: 'API Reference',
-      href: 'https://docs.mongodb.com/realm-sdks/kotlin/latest/',
-    },
-    {
       type: 'category',
       label: 'Realm Database',
       collapsible: true,
@@ -122,7 +112,17 @@ const sidebars = {
         'sdk/kotlin/app-services/authenticate-users'
       ],
     },
-    "sdk/kotlin/migrate-from-java-sdk"
+    "sdk/kotlin/migrate-from-java-sdk",
+    {
+      type: 'link',
+      label: 'Release Notes',
+      href: 'https://github.com/realm/realm-kotlin/blob/releases/CHANGELOG.md',
+    },
+    {
+      type: 'link',
+      label: 'API Reference',
+      href: 'https://docs.mongodb.com/realm-sdks/kotlin/latest/',
+    },
   ],
 
   studio: [
